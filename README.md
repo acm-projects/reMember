@@ -24,7 +24,8 @@ At the minimum, this app will contain:
 - Create functionality to make app available in other popular languages
 - Add an audio prompts version of text
 ## Tech Stack Resources
-
+ * Wireframing
+    - [Figma](https://www.figma.com/)
  * IDE : [Android Studio](https://developer.android.com/studio)
     - You can really use any text editor you prefer (VSCode, etc) but I really like Android Studio, I've used it for many projects and find it very reliable especially when for making cross compatible mobile apps    
 * Machine Learning Algorithm:
