@@ -47,12 +47,12 @@ At the minimum, this app will contain:
   * Used to store our contacts
   * [Firebase](https://firebase.google.com/), made by google, also has services making it easier to train our ML Models
   * [Firebase and flutter](https://www.youtube.com/watch?v=sfA3NWDBPZ4&list=PL4cUxeGkcC9j--TKIdkb3ISfRbJeJYQwC)
-* [Gitbash](https://gitforwindows.org/)
-  * A very useful [Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) of commands you will use
+* Gitbash
+  * A very useful [Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) of commands you will use (often)
 * Some random tutorials you may find useful!
-  * https://medium.com/@estebanuri/real-time-face-recognition-with-android-tensorflow-lite-14e9c6cc53a5
-  * https://medium.com/@saidakbarp/real-time-face-recognition-tflite-3fb818ac039a
-  * https://towardsdatascience.com/using-facenet-for-on-device-face-recognition-with-android-f84e36e19761
+  * [Real time facial recognition with android tflite](https://medium.com/@estebanuri/real-time-face-recognition-with-android-tensorflow-lite-14e9c6cc53a5)
+  * [Real time facial recognition with android tflite](https://medium.com/@saidakbarp/real-time-face-recognition-tflite-3fb818ac039a)
+  * [Using facenet for on device face recognition](https://towardsdatascience.com/using-facenet-for-on-device-face-recognition-with-android-f84e36e19761)
 
 
 
