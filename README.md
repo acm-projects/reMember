@@ -14,7 +14,7 @@ At the minimum, this app will contain:
     * Information displayed will include:
         * Name
         * Photo
-        * Relationship to the User
+        * Relationship to the user
         * Any important facts that may allow the user to remember that contact
 4)  A Flashcard Page
     * Will generate flashcards for each contact in the book to help the user train to remember important contacts
