@@ -1,4 +1,4 @@
- # Senior Contacts
+ # Senior Contacts 🕶️
 
 This simple mobile app allows Alzheimer's patients to create a digital contact book of friends and loved ones to help strengthen their memory.
 ## MVP
@@ -21,6 +21,8 @@ At the minimum, this app will contain:
 ## Stretch Goals
 
 - Create more functionality to remind userse of certain daily activities they may forget (taking meds, etc)
+- Create functionality to make app available in other popular languages
+- Add an audio prompts version of text
 ## Tech Stack Resources
 
  * IDE : [Android Studio](https://developer.android.com/studio)
