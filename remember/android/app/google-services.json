@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486337982510",
+    "project_id": "remember-f6b67",
+    "storage_bucket": "remember-f6b67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486337982510:android:a02dd4a01e72428a2befbf",
+        "android_client_info": {
+          "package_name": "com.example.remember"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486337982510-g2tl3ugkoh4sgf2s0bp3fhq6jq4oat9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBewvfRrpYjHs3SsoQScOXk5B5PQr6eSWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486337982510-g2tl3ugkoh4sgf2s0bp3fhq6jq4oat9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
