@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 120.0,
+              height: 180.0,
               child: Align(
                 alignment: Alignment.center,
                 child: Text('reMember',
@@ -30,9 +30,9 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 30.0,
-            ),
+            //const SizedBox(
+              //height: 15.0,
+            //),
             ElevatedButton.icon(
               onPressed: () {
                 Navigator.pushNamed(context, '/contactBook');
@@ -49,13 +49,12 @@ class _HomeState extends State<Home> {
                 primary: const Color.fromARGB(255, 173, 106, 108),
                 fixedSize: const Size(375, 125),
               ),
-
             ),
             const SizedBox(
               height: 40.0,
               child: Align(
                 alignment: Alignment.center,
-                child: Text('Contact book',
+                child: Text('Contact Book',
                   style: TextStyle(
                     color: Color.fromARGB(255, 34, 34, 59),
                     fontSize: 30.0,
@@ -68,7 +67,6 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 30.0,
             ),
-
             ElevatedButton.icon(
               onPressed: () {
                 Navigator.pushNamed(context, '/scanContact');
@@ -85,13 +83,12 @@ class _HomeState extends State<Home> {
                 primary: const Color.fromARGB(255, 93, 46, 70),
                 fixedSize: const Size(325, 130),
               ),
-
             ),
             const SizedBox(
               height: 40.0,
               child: Align(
                 alignment: Alignment.center,
-                child: Text('Scan contact',
+                child: Text('Scan Contact',
                   style: TextStyle(
                     color: Color.fromARGB(255, 34, 34, 59),
                     fontSize: 30.0,
@@ -112,7 +109,6 @@ class _HomeState extends State<Home> {
               icon: const Icon(Icons.event_note_rounded,
                 size: 60,
               ),
-
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)
