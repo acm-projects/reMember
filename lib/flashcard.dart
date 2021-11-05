@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Flashcard extends StatefulWidget {
-  const Flashcard({Key? key}) : super(key: key);
+  const Flashcard({Key key}) : super(key: key);
 
   @override
   _FlashcardState createState() => _FlashcardState();

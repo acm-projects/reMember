@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class NewContact extends StatefulWidget {
-  const NewContact({Key? key}) : super(key: key);
+  const NewContact({Key key}) : super(key: key);
   @override
   _NewContactState createState() => _NewContactState();
 }
 
 class _NewContactState extends State<NewContact> {
-  late String name;
-  late int age;
-  late String gender;
-  late int phoneNum;
-  late String email;
-  late String relation;
-  late String description;
+    String name;
+    int age;
+    String gender;
+    int phoneNum;
+    String email;
+    String relation;
+    String description;
 
   @override
   Widget build(BuildContext context){
@@ -90,7 +90,8 @@ class _NewContactState extends State<NewContact> {
                           bottomLeft: Radius.circular(0)),
                     ),
                     padding: const EdgeInsets.fromLTRB(130, 10, 30, 0),
-                    child: const TextField(
+                    child: TextField(
+                      onChanged: (value) => name = value,
                       decoration: InputDecoration(
                         filled: true, fillColor: Color.fromARGB(255, 234, 233, 233),
                         enabledBorder: OutlineInputBorder(
@@ -348,6 +349,7 @@ class _NewContactState extends State<NewContact> {
               //Save Contact Button
               ElevatedButton(
                 onPressed: () {
+                  //SEND DATA THROUGH HERE GRACE
                   Navigator.pushNamed(context, '/contactBook');
                 },
                 child: const Center(

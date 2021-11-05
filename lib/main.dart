@@ -10,10 +10,10 @@ import 'package:remember/flashcard.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/home', //change route to '/' when done with app so that loading screen works
-  home: const Home(),
+  home: Home(),
   routes: {
     //'/': (context) => const Loading(),
-    '/home': (context) => const Home(),
+    '/home': (context) => Home(),
     '/contactBook': (context) => const ContactBook(),
     '/scanContact': (context) => const ScanContact(),
     '/flashcard': (context) => const Flashcard(),

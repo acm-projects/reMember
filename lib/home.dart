@@ -1,14 +1,70 @@
+import 'package:remember/db/database.dart';
+import 'package:remember/widgets/sign-in.dart';
+import 'package:remember/widgets/sign-up.dart';
+import 'package:remember/services/facenet.service.dart';
+import 'package:remember/services/ml_kit_service.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
+
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-
+  Home({Key key}) : super(key: key);
   @override
-  _HomeState createState() => _HomeState();
+_HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+  class _HomeState extends State<Home> {
+
+  // Services injection
+  FaceNetService _faceNetService = FaceNetService();
+  MLKitService _mlKitService = MLKitService();
+  DataBaseService _dataBaseService = DataBaseService();
+
+  CameraDescription cameraDescription;
+  bool loading = false;
+
   @override
+    void initState() {
+     super.initState(); //super.
+     _startUp();
+  }
+
+  /// 1 Obtain a list of the available cameras on the device.
+  /// 2 loads the face net model
+  _startUp() async {
+    _setLoading(true);
+
+    List<CameraDescription> cameras = await availableCameras();
+
+    /// takes the front camera
+    cameraDescription = cameras.firstWhere(
+          (CameraDescription camera) =>
+      camera.lensDirection == CameraLensDirection.front,
+    );
+
+    // start the services
+    await _faceNetService.loadModel();
+    await _dataBaseService.loadDB();
+    _mlKitService.initialize();
+
+    _setLoading(false);
+  }
+
+  // shows or hides the circular progress indicator
+  _setLoading(bool value) {
+    setState(() {
+      loading = value;
+    });
+  }
+
+//   @override
+//   _HomeState createState() => _HomeState();
+// }
+
+// class _HomeState extends State<Home> {
+//   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 232, 214, 203),
@@ -69,7 +125,14 @@ class _HomeState extends State<Home> {
             ),
             ElevatedButton.icon(
               onPressed: () {
-                Navigator.pushNamed(context, '/scanContact');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => SignUp(
+                        cameraDescription: cameraDescription,
+                      ),
+                    ),
+                  );
               },
               label: const Text(''),
               icon: const Icon(Icons.add_a_photo_outlined,

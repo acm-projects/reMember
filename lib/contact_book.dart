@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ContactBook extends StatefulWidget {
-  const ContactBook({Key? key}) : super(key: key);
+  const ContactBook({Key key}) : super(key: key);
   @override
   _ContactBookState createState() => _ContactBookState();
 }

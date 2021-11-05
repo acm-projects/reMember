@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class EditContact extends StatefulWidget {
-  const EditContact({Key? key}) : super(key: key);
+  const EditContact({Key key}) : super(key: key);
   @override
   _EditContactState createState() => _EditContactState();
 }
