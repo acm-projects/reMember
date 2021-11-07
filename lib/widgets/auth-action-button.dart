@@ -29,8 +29,8 @@ class _AuthActionButtonState extends State<AuthActionButton> {
 
   final TextEditingController _userTextEditingController =
       TextEditingController(text: '');
-  final TextEditingController _passwordTextEditingController =
-      TextEditingController(text: '');
+  // final TextEditingController _passwordTextEditingController =
+  //     TextEditingController(text: '');
 
   User predictedUser;
 
@@ -38,10 +38,10 @@ class _AuthActionButtonState extends State<AuthActionButton> {
     /// gets predicted data from facenet service (user face detected)
     List predictedData = _faceNetService.predictedData;
     String user = _userTextEditingController.text;
-    String password = _passwordTextEditingController.text;
+   //String password = _passwordTextEditingController.text;
 
     /// creates a new user in the 'database'
-    await _dataBaseService.saveData(user, password, predictedData);
+    await _dataBaseService.saveData(user,predictedData);
 
     /// resets the face stored in the face net sevice
     this._faceNetService.setPredictedData(null);
@@ -49,29 +49,29 @@ class _AuthActionButtonState extends State<AuthActionButton> {
         MaterialPageRoute(builder: (BuildContext context) => Home()));
   }
 
-  Future _signIn(context) async {
-    String password = _passwordTextEditingController.text;
-
-    if (this.predictedUser?.password == password) {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              // builder: (BuildContext context) => Profile(
-              //       this.predictedUser.user,
-              //       imagePath: _cameraService.imagePath,
-              //     )
-               ));
-    } else {
-      showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            content: Text('Wrong password!'),
-          );
-        },
-      );
-    }
-  }
+  // Future _signIn(context) async {
+  //   String password = _passwordTextEditingController.text;
+  //
+  //   if (this.predictedUser?.password == password) {
+  //     Navigator.push(
+  //         context,
+  //         MaterialPageRoute(
+  //             // builder: (BuildContext context) => Profile(
+  //             //       this.predictedUser.user,
+  //             //       imagePath: _cameraService.imagePath,
+  //             //     )
+  //              ));
+  //   } else {
+  //     showDialog(
+  //       context: context,
+  //       builder: (context) {
+  //         return AlertDialog(
+  //           content: Text('Wrong password!'),
+  //         );
+  //       },
+  //     );
+  //   }
+  // }
 
   String _predictUser() {
     String userAndPass = _faceNetService.predict();
@@ -169,22 +169,22 @@ class _AuthActionButtonState extends State<AuthActionButton> {
                         labelText: "Your Name",
                       )
                     : Container(),
-                SizedBox(height: 10),
-                widget.isLogin && predictedUser == null
-                    ? Container()
-                    : AppTextField(
-                        controller: _passwordTextEditingController,
-                        labelText: "Password",
-                        isPassword: true,
-                      ),
-                SizedBox(height: 10),
-                Divider(),
+                //SizedBox(height: 10),
+                //widget.isLogin && predictedUser == null
+                  //  ? Container()
+                    //: AppTextField(
+                        //controller: _passwordTextEditingController,
+                        //labelText: "Password",
+                        //isPassword: true,
+                     // ),
+                //SizedBox(height: 10),
+                //Divider(),
                 SizedBox(height: 10),
                 widget.isLogin && predictedUser != null
                     ? AppButton(
                         text: 'LOGIN',
                         onPressed: () async {
-                          _signIn(context);
+                          //_signIn(context);
                         },
                         icon: Icon(
                           Icons.login,
