@@ -51,7 +51,7 @@ dev_dependencies:
     sdk: flutter
   firebase_database: any #^4.4.0 #New
   firebase_core: any #^0.5.3 #New
-  cloud_firestore: any #"^0.14.0+1" #New
+  cloud_firestore: ^1.0.0 #"^0.14.0+1" #New
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
