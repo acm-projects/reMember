@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:remember/db/database.dart';
 import 'package:remember/models/user.model.dart';
+import 'package:remember/new_contact.dart';
 //import 'package:remember/pages/profile.dart';
 import 'package:remember/widgets/app_button.dart';
 import 'package:remember/services/camera.service.dart';
@@ -46,7 +47,7 @@ class _AuthActionButtonState extends State<AuthActionButton> {
     /// resets the face stored in the face net sevice
     this._faceNetService.setPredictedData(null);
     Navigator.push(context,
-        MaterialPageRoute(builder: (BuildContext context) => Home()));
+        MaterialPageRoute(builder: (BuildContext context) => NewContact()));
   }
 
   // Future _signIn(context) async {

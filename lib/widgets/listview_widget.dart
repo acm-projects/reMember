@@ -1,6 +1,14 @@
 import 'package:remember/widgets/users_provider.dart';
 import 'package:flutter/material.dart';
 
+String _contactName = "original contact name";
+
+//trying to get _contactName to send to other pages
+/*class gettingCN {
+  final String contactName;
+  const gettingCN(this.contactName);
+}*/
+
 class ListViewWidget extends StatefulWidget {
   final UsersProvider usersProvider;
 
@@ -46,10 +54,21 @@ class _ListViewWidgetState extends State<ListViewWidget> {
     padding: EdgeInsets.all(12),
     children: [
       ...widget.usersProvider.users
-          .map((user) => ListTile(
-        onTap: () => Navigator.pushNamed(context, '/contactInfo'),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),
-        side: BorderSide(color: Color.fromARGB(255, 34, 34, 59), width: 2)),
+          .map((user) => Card(
+          color: Color.fromARGB(255, 232, 214, 203),
+          elevation: 0.0,
+          child: ListTile(
+        onTap: () {
+          _contactName = user.name;
+          print("About to print contact name");
+          print(_contactName);
+          Navigator.pushNamed(context, '/contactInfo');
+        },
+        //onTap: () => Navigator.pushNamed(context, '/contactInfo'),
+        //TRYING TO GET USER's NAME
+        //_contactName = Text(user.name);
+        //onPressed: (value) => _contactName = value,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
         tileColor: Color.fromARGB(255, 173, 106, 108),
         title: Text(user.name,
           style: TextStyle(color: Colors.white, fontSize: 16, fontFamily: "Quicksand"),
@@ -59,9 +78,9 @@ class _ListViewWidgetState extends State<ListViewWidget> {
         ),
         //user image
         leading: CircleAvatar(
-          backgroundImage: NetworkImage(user.relation),
+          backgroundImage: NetworkImage(user.img),
         ),
-      ))
+      )))
           .toList(),
       if (widget.usersProvider.hasNext)
         Center(

@@ -20,6 +20,7 @@ class UsersProvider extends ChangeNotifier {
     return UserX(
       name: user['name'],
       relation: user['relation'],
+      img: user['img'],
     );
   }).toList();
 
